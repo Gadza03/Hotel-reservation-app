@@ -9,6 +9,16 @@ export const fetchAllHotels = async (req, res) => {
   }
 };
 
+export const fetchHotelById = async (res, id) => {
+  const hotel = await Hotel.findById(id);
+
+  if (!hotel) {
+    res.status(404).json({ message: error.message });
+  }
+
+  res.status(200).json(hotel);
+};
+
 export const addNewHotel = async (req, res) => {
   try {
     const hotel = new Hotel({

@@ -1,0 +1,14 @@
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.blur {
+  height: 40px;
+  width: 40px;
+  background-color: rgba(19, 7, 7, 0.253);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

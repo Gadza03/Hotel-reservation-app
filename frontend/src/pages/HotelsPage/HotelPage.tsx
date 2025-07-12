@@ -38,27 +38,33 @@ export const HotelPage = () => {
         </div>
       </div>
 
-      <div className={`${c.hotelList} container ${c.overlap}`}>
-        <h2 className={c.sectionTitle}>Spacious Rooms</h2>
-        <div className={c.cardGrid}>
-          {filteredHotels
-            .slice(0, Math.ceil(filteredHotels.length / 2))
-            .map((hotel) => (
-              <HotelCard key={hotel.id} hotel={hotel} />
-            ))}
-        </div>
-      </div>
+      {filteredHotels.length === 0 ? (
+        <h3 className={`${c.noResults} container`}>No hotels found</h3>
+      ) : (
+        <>
+          <div className={`${c.hotelList} container`}>
+            <h2 className={c.sectionTitle}>Spacious Rooms</h2>
+            <div className={c.cardGrid}>
+              {filteredHotels
+                .slice(0, Math.ceil(filteredHotels.length / 2))
+                .map((hotel) => (
+                  <HotelCard key={hotel._id} hotel={hotel} />
+                ))}
+            </div>
+          </div>
 
-      <div className={`${c.hotelList} container`}>
-        <h2 className={c.sectionTitle}>Relax by the Pool</h2>
-        <div className={c.cardGrid}>
-          {filteredHotels
-            .slice(Math.ceil(filteredHotels.length / 2))
-            .map((hotel) => (
-              <HotelCard key={hotel.id} hotel={hotel} />
-            ))}
-        </div>
-      </div>
+          <div className={`${c.hotelList} container`}>
+            <h2 className={c.sectionTitle}>Relax by the Pool</h2>
+            <div className={c.cardGrid}>
+              {filteredHotels
+                .slice(Math.ceil(filteredHotels.length / 2))
+                .map((hotel) => (
+                  <HotelCard key={hotel._id} hotel={hotel} />
+                ))}
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

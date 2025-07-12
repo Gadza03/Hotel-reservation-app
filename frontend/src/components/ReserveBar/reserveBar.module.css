@@ -1,0 +1,38 @@
+.bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #ddd;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  color: #999;
+  margin: 0;
+}
+
+.price {
+  font-weight: 900;
+  font-size: 24px;
+  margin: 0;
+  color: var(--font-color);
+}
+
+.unit {
+  font-weight: normal;
+}
+
+.button {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,7 +1,17 @@
-import { fetchAllHotels, addNewHotel } from "../services/hotelService.js";
+import {
+  fetchAllHotels,
+  addNewHotel,
+  fetchHotelById,
+} from "../services/hotelService.js";
 
 export const getAllHotels = async (req, res) => {
   const result = await fetchAllHotels(req, res);
+  return result;
+};
+
+export const getHotelById = async (req, res) => {
+  const { id } = req.params;
+  const result = await fetchHotelById(res, id);
   return result;
 };
 

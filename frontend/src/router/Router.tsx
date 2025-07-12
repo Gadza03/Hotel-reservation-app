@@ -2,7 +2,13 @@ import { useEffect } from "react";
 import { useLocation } from "react-router";
 import { paths } from "./paths";
 import { useRoutes } from "react-router";
-import { HotelPage, LoginPage, RegisterPage, WelcomePage } from "../pages";
+import {
+  HotelDetailsPage,
+  HotelPage,
+  LoginPage,
+  RegisterPage,
+  WelcomePage,
+} from "../pages";
 
 export default function Router() {
   const location = useLocation();
@@ -27,6 +33,11 @@ export default function Router() {
     {
       path: paths.hotels,
       element: <HotelPage />,
+    },
+
+    {
+      path: paths.hotelDetails,
+      element: <HotelDetailsPage />,
     },
   ]);
 }
