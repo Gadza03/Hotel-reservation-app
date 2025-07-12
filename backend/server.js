@@ -1,7 +1,8 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import { authRouter, hotelRouter } from "./routes/index.js";
+import { router } from "./routes/apiRouter.js";
+import cors from "cors";
 
 dotenv.config();
 
@@ -18,8 +19,8 @@ db.on("error", (error) => console.error(error));
 db.once("open", () => console.log("Connected to Database"));
 
 app.use(express.json());
+app.use(cors());
 
-app.use("/hotels", hotelRouter);
-app.use("/auth", authRouter);
+app.use("/api", router);
 
 app.listen(3000, () => console.log("Server Started"));

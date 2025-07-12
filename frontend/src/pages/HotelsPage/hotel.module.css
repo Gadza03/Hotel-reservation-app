@@ -1,0 +1,65 @@
+.overlayWrap {
+  position: relative;
+  height: 280px;
+  background-image: url("../../assets/imgs/hotelPageImg.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.textBox {
+  color: white;
+  width: 100%;
+}
+
+.textBox h1 {
+  color: white;
+}
+.subtitle {
+  font-size: 14px;
+  margin: 0;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 8px 0 16px;
+  max-width: 260px;
+}
+
+.hotelList {
+  margin-top: -35px;
+  border-radius: 20px;
+  padding-block: 20px;
+  position: relative;
+  z-index: 10000;
+  background-color: white;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.cardGrid {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 16px;
+}
+
+.noResults {
+  font-size: 16px;
+  color: #888;
+}

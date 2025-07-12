@@ -37,7 +37,9 @@ const seed = async () => {
       city: "Split",
       pricePerNight: 150,
       rating: 4.7,
-      imageUrls: ["https://via.placeholder.com/300x200"],
+      imageUrls: [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/692601682.jpg?k=a72995d2bb3ff0c1b6e1f183cf85c77ff86bb73429f816ffd9b5189e81b009d2&o=",
+      ],
       amenities: ["wifi", "bazen", "spa"],
       createdBy: admin._id,
     });
@@ -49,7 +51,9 @@ const seed = async () => {
       city: "Split",
       pricePerNight: 110,
       rating: 4.3,
-      imageUrls: ["https://via.placeholder.com/300x200"],
+      imageUrls: [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/589576929.jpg?k=b921d66a030381e04d8c314060a960d802a5b299faab0b5b4b2350727faa596b&o=",
+      ],
       amenities: ["wifi", "restoran"],
       createdBy: admin._id,
     });

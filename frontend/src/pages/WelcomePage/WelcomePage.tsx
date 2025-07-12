@@ -1,9 +1,17 @@
+import { useNavigate } from "react-router";
 import WelcomeImg from "../../assets/imgs/welcomeImg.png";
 import { Button } from "../../components";
 import c from "./welcome.module.css";
+import { paths } from "../../router/paths";
 export const WelcomePage = () => {
-  const handleLogin = () => {};
-  const handleRegister = () => {};
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate(paths.login);
+  };
+  const handleRegister = () => {
+    navigate(paths.register);
+  };
 
   return (
     <div className={c.welcomeContainer}>
