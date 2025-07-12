@@ -1,16 +1,13 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import User from "../models/user.js";
-import Hotel from "../models/hotel.js";
-import Booking from "../models/booking.js";
-import Review from "../models/review.js";
+import { Booking, Hotel, Review, User } from "../models/index.js";
 
 dotenv.config();
 
 const seed = async () => {
   try {
     await mongoose.connect(process.env.DATABASE_URL);
-    console.log("✅ Connected to DB");
+    console.log("Connected to DB");
 
     await Review.deleteMany();
     await User.deleteMany();

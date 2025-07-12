@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import router from "./routes/hotels.js";
+import { authRouter, hotelRouter } from "./routes/index.js";
 
 dotenv.config();
 
@@ -19,6 +19,7 @@ db.once("open", () => console.log("Connected to Database"));
 
 app.use(express.json());
 
-app.use("/hotels", router);
+app.use("/hotels", hotelRouter);
+app.use("/auth", authRouter);
 
 app.listen(3000, () => console.log("Server Started"));
