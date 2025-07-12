@@ -1,5 +1,6 @@
 import { type ChangeEvent } from "react";
 import c from "./searchbar.module.css";
+import SearchIcon from "../../assets/svgs/search.svg";
 
 type SearchBarProps = {
   searchTerm: string;
@@ -12,12 +13,15 @@ export const SearchBar = ({ searchTerm, setSearchTerm }: SearchBarProps) => {
   };
 
   return (
-    <input
-      type="text"
-      placeholder="Look for homestay..."
-      value={searchTerm}
-      onChange={handleChange}
-      className={c.input}
-    />
+    <div className={c.searchBarContainer}>
+      <input
+        type="text"
+        placeholder="Look for homestay..."
+        value={searchTerm}
+        onChange={handleChange}
+        className={c.input}
+      />
+      <img src={SearchIcon} alt="searc icon" />
+    </div>
   );
 };

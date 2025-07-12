@@ -12,7 +12,12 @@ export const HotelCard = ({ hotel }: HotelCardProps) => {
       <div className={c.hotelInfo}>
         <h3>{hotel.name}</h3>
         <p>{hotel.description}</p>
-        <p className={c.price}>€{hotel.pricePerNight} / night</p>
+        <div className={c.priceReview}>
+          <p className={c.price}>
+            <strong>€{hotel.pricePerNight}</strong>/night
+          </p>
+          <p className={c.review}>⭐{hotel.rating}</p>
+        </div>
       </div>
     </div>
   );

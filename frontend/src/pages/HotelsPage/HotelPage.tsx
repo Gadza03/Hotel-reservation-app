@@ -30,7 +30,7 @@ export const HotelPage = () => {
     <div>
       <div className={c.overlayWrap}>
         <div className={c.overlay}>
-          <div className={c.textBox}>
+          <div className={`${c.textBox} container`}>
             <p className={c.subtitle}>Escape the ordinary</p>
             <h1 className={c.title}>Discover comfort and peace in Split</h1>
             <SearchBar searchTerm={filter} setSearchTerm={setFilter} />
@@ -38,16 +38,25 @@ export const HotelPage = () => {
         </div>
       </div>
 
-      <div className={`${c.hotelList} container`}>
-        <h2 className={c.sectionTitle}>Hotel accommodation</h2>
+      <div className={`${c.hotelList} container ${c.overlap}`}>
+        <h2 className={c.sectionTitle}>Spacious Rooms</h2>
         <div className={c.cardGrid}>
-          {filteredHotels.length === 0 ? (
-            <p className={c.noResults}>No hotels found.</p>
-          ) : (
-            filteredHotels.map((hotel) => (
+          {filteredHotels
+            .slice(0, Math.ceil(filteredHotels.length / 2))
+            .map((hotel) => (
               <HotelCard key={hotel.id} hotel={hotel} />
-            ))
-          )}
+            ))}
+        </div>
+      </div>
+
+      <div className={`${c.hotelList} container`}>
+        <h2 className={c.sectionTitle}>Relax by the Pool</h2>
+        <div className={c.cardGrid}>
+          {filteredHotels
+            .slice(Math.ceil(filteredHotels.length / 2))
+            .map((hotel) => (
+              <HotelCard key={hotel.id} hotel={hotel} />
+            ))}
         </div>
       </div>
     </div>
