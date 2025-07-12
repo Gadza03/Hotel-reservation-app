@@ -6,10 +6,12 @@ import { Button } from "@mui/material";
 import { loginUser } from "../../../services/Auth/authService";
 import { useNavigate } from "react-router";
 import { paths } from "../../../router/paths";
+import { useAuth } from "../../../contexts/AuthContext/useAuth";
 
 type Errors = Partial<Login>;
 
 export const LoginPage = () => {
+  const { login } = useAuth();
   const navigate = useNavigate();
   const [formData, setFormData] = useState<Login>({
     email: "",
@@ -34,8 +36,16 @@ export const LoginPage = () => {
 
     if (Object.keys(newErrors).length === 0) {
       try {
-        await loginUser(formData);
-        navigate(paths.hotels);
+        if (localStorage.getItem("token")) {
+          localStorage.removeItem("token");
+        }
+        const userData = await loginUser(formData);
+
+        if (userData.token) {
+          login(userData.token);
+
+          navigate(paths.hotels);
+        }
       } catch (error) {
         setErrors((prev) => ({
           ...prev,

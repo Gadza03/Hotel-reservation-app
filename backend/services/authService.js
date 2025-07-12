@@ -12,7 +12,7 @@ export const registerUser = async (userData) => {
     const user = new User(userData);
     await user.save();
 
-    const token = generateToken(user._id);
+    const token = generateToken(user);
 
     return {
       status: 201,
@@ -38,7 +38,7 @@ export const loginUser = async (email, password) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) throw new Error("Invalid email or password");
 
-    const token = generateToken(user._id);
+    const token = generateToken(user);
 
     return {
       status: 200,
