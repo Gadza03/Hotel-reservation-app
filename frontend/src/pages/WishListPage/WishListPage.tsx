@@ -18,7 +18,6 @@ export const WishListPage = () => {
     }
     const getWishlist = async () => {
       try {
-        console.log(user._id);
         const data = await getWishList(user._id);
         setWishlist(data);
       } catch (err) {

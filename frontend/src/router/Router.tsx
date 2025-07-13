@@ -12,7 +12,7 @@ import {
   WelcomePage,
   WishListPage,
 } from "../pages";
-import { MainLayout } from "../layouts";
+import { MainLayout, ProtectedRoute } from "../layouts";
 
 export default function Router() {
   const location = useLocation();
@@ -35,17 +35,22 @@ export default function Router() {
       element: <RegisterPage />,
     },
     {
-      element: <MainLayout />,
+      element: <ProtectedRoute />,
       children: [
-        { path: paths.hotels, element: <HotelPage /> },
-        { path: paths.profile, element: <ProfilePage /> },
-        { path: paths.wishlist, element: <WishListPage /> },
-        { path: paths.bookings, element: <BookingPage /> },
+        {
+          path: paths.hotelDetails,
+          element: <HotelDetailsPage />,
+        },
+        {
+          element: <MainLayout />,
+          children: [
+            { path: paths.hotels, element: <HotelPage /> },
+            { path: paths.profile, element: <ProfilePage /> },
+            { path: paths.wishlist, element: <WishListPage /> },
+            { path: paths.bookings, element: <BookingPage /> },
+          ],
+        },
       ],
-    },
-    {
-      path: paths.hotelDetails,
-      element: <HotelDetailsPage />,
     },
   ]);
 }

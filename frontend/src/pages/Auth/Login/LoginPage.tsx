@@ -40,7 +40,6 @@ export const LoginPage = () => {
           localStorage.removeItem("token");
         }
         const userData = await loginUser(formData);
-        console.log(userData);
 
         if (userData.token) {
           login(userData.token);
