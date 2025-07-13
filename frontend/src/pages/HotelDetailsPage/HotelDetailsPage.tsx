@@ -59,7 +59,7 @@ export const HotelDetailsPage = () => {
         </section>
       </div>
 
-      <ReserveBar price={hotel.pricePerNight} />
+      <ReserveBar hotel={hotel} />
     </div>
   );
 };

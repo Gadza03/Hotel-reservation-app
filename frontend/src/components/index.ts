@@ -6,3 +6,4 @@ export * from "./ReserveBar/ReserveBar";
 export * from "./WishListButton/WishListButton";
 export * from "./Navbar/BottomNavbar";
 export * from "./BookingCard/BookingCard";
+export * from "./PaymentModal/PaymentModal";
