@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import c from "./booking.module.css";
-import { getBookingsByUser } from "../../services/Booking/bookingSerivce";
+import { getBookingsByUser } from "../../services/Booking/bookingService";
 import { useAuth } from "../../contexts/AuthContext/useAuth";
 import type { Booking } from "../../types/booking";
 import { BookingCard } from "../../components";

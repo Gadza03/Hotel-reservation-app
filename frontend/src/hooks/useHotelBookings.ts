@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getHotelActiveBookings } from "../services/Booking/bookingSerivce";
+import { getHotelActiveBookings } from "../services/Booking/bookingService";
 
 export const useHotelBookings = (hotelId: string) => {
   const [bookedRanges, setBookedRanges] = useState<

@@ -6,7 +6,7 @@ import { useHotelBookings } from "../../hooks/useHotelBookings";
 import DatePicker from "react-datepicker";
 import toast from "react-hot-toast";
 import { useAuth } from "../../contexts/AuthContext/useAuth";
-import { createBooking } from "../../services/Booking/bookingSerivce";
+import { createBooking } from "../../services/Booking/bookingService";
 import type { CreateBooking } from "../../types/createBooking";
 import { PaymentModal } from "../PaymentModal/PaymentModal";
 
