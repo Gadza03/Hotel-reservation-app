@@ -37,8 +37,7 @@ Create a `.env` file **inside the `backend/` folder** following the .env-example
 
 ```bash
 cd backend
-cd seed
-node seed.js
+node .\seed\seed.js
 ```
 
 ---
