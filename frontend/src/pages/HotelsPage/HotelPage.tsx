@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import type { Hotel } from "../../types/hotel";
 import { getAllHotels } from "../../services/Hotel/hotelService";
 import { SearchBar } from "../../components/Searchbar/Searchbar";
-import { HotelCard } from "../../components";
+import { BottomNavbar, HotelCard } from "../../components";
 
 export const HotelPage = () => {
   const [hotels, setHotels] = useState<Hotel[]>([]);
@@ -65,6 +65,7 @@ export const HotelPage = () => {
           </div>
         </>
       )}
+      <BottomNavbar />
     </div>
   );
 };
