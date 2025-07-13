@@ -201,10 +201,10 @@ const seed = async () => {
       {
         user: user._id,
         hotel: insertedHotels[6]._id,
-        startDate: new Date("2025-07-10"),
-        endDate: new Date("2025-07-15"),
+        startDate: new Date("2024-07-10"),
+        endDate: new Date("2024-07-15"),
         totalPrice: 875,
-        status: "active",
+        status: "completed",
       },
     ];
 
