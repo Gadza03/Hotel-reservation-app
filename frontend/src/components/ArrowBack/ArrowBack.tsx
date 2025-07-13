@@ -5,8 +5,8 @@ export const ArrowBack = () => {
   const navigate = useNavigate();
 
   return (
-    <button className={c.arrow} onClick={() => navigate(-1)}>
+    <div className={c.arrow} onClick={() => navigate(-1)}>
       <img src={Arrow} alt="arrow" />
-    </button>
+    </div>
   );
 };
