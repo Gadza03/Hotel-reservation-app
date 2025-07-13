@@ -36,7 +36,7 @@ export const WishListPage = () => {
   if (error) return <p className="text-red-500">{error}</p>;
 
   return (
-    <div className={c.hotels}>
+    <div className={`container ${c.hotels}`}>
       <h1 className={c.title}>Your Wishlist</h1>
       <p className={c.subtitle}>Browse the hotels you've saved for later.</p>
 

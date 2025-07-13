@@ -1,0 +1,20 @@
+.wrapper {
+  padding-block: 50px;
+}
+
+.wrapper h1 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #2c3e50;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  margin-bottom: 1.5rem;
+  color: #34495e;
+  border-left: 4px solid #482f8d;
+  padding-left: 0.75rem;
+}

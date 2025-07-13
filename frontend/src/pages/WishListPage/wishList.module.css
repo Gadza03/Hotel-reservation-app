@@ -1,6 +1,6 @@
 .hotels {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  padding: 2rem;
+  padding-block: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
