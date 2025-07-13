@@ -17,6 +17,11 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
 .container {
   max-width: 1200px;
   padding-inline: 1rem;

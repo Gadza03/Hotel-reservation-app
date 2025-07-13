@@ -6,7 +6,7 @@ type Props = {
 
 export const ReserveBar = ({ price }: Props) => {
   return (
-    <div className={c.bar}>
+    <div className={`${c.bar} container`}>
       <div>
         <p className={c.label}>Price estimate</p>
         <p className={c.price}>

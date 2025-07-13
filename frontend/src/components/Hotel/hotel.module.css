@@ -8,6 +8,7 @@
   scroll-snap-align: start;
   overflow: hidden;
   transition: transform 0.2s;
+  cursor: pointer;
 }
 
 .hotelCard:hover {
