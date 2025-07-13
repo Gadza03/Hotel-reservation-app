@@ -50,3 +50,9 @@ Start both frontend and backend in a single terminal from root folder:
 ```bash
 npm run dev
 ```
+
+### User Credentials
+```bash
+Email: mate@example.com
+Password: 123456
+```
