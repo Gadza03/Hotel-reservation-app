@@ -7,15 +7,15 @@ import { useEffect } from "react";
 export const ProtectedRoute = () => {
   const { user, isLoading } = useAuth();
 
+  useEffect(() => {
+    if (!user && !isLoading) {
+      toast.error("You must log in to access this page");
+    }
+  }, [user, isLoading]);
+
   if (isLoading) {
     return <div className="loader">loading...</div>;
   }
-
-  useEffect(() => {
-    if (!user) {
-      toast.error("You must log in to access this page");
-    }
-  }, [user]);
 
   if (!user) {
     return <Navigate to={paths.home} replace />;
